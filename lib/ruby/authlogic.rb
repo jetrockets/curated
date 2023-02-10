@@ -12,4 +12,5 @@ class Authlogic < Curated::RubyGem
 
   cons 'There is no built-in support for 2FA (two-factor authentication).'
   cons 'You need two implement all authentication logic yourself. Requires a lot of boilerplate code.'
+  cons 'Tightly coupled to Rails. It is not possible to use it outside of Rails.'
 end
