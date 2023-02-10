@@ -22,12 +22,12 @@ jobs:
       with:
         ruby-version: 3.2.0
         bundler-cache: true
-    - name: Render
+    - name: Install Dependencies
       if: steps.filter.outputs.curates == 'true' || steps.filter.outputs.templates == 'true'
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
-        bundle exec rake render
+      run: bundle install
+    - name: Render README
+      if: steps.filter.outputs.curates == 'true' || steps.filter.outputs.templates == 'true'
+      run: bundle exec rake render
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
