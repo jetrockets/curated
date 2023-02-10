@@ -2,7 +2,7 @@
 
 ## Authentication
 
-### [# authlogic](#authlogic)
+### [¶ authlogic](#authlogic)
 
   [https://github.com/binarylogic/authlogic](https://github.com/binarylogic/authlogic)
 
