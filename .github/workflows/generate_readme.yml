@@ -1,21 +1,29 @@
 name: Generate README
 
 on:
-  pull_request:
-    types:
-      - opened
+  push:
+    branches:
+      - main
 
 jobs:
   render:
-    if: contains(github.event.pull_request.labels.*.name, 'ruby')
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          curates:
+            - 'lib/ruby/**'
+          templates
+            - 'lib/templates/**'
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.2.0
         bundler-cache: true
-    - name: Rake
+    - name: Render
+      if: steps.filter.outputs.curates == 'true' || steps.filter.outputs.templates == 'true'
       run: |
         gem install bundler
         bundle install --jobs 4 --retry 3
