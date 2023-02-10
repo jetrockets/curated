@@ -1,0 +1,29 @@
+name: Generate README
+
+on:
+  pull_request:
+    branches: [main]
+    types: [closed]
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2.0
+        bundler-cache: true
+    - name: Rake
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake render
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update README.md
+        commit_options: --signoff
+        commit_user_name: GitHub Actions
+        file_pattern: README.md
+        branch: main

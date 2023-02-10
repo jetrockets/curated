@@ -1,0 +1,38 @@
+# Curated list of libraries used by JetRockets
+
+<% ruby_curates.each do |category, curates| %>
+  ## <%= category.name %>
+
+  <% curates.each do |curated| %>
+  ### [# <%= curated.name %>](#<%= curated.name %>)
+
+  <% if curated.homepage %>
+    [<%= curated.homepage %>](<%= curated.homepage %>)
+  <% end %>
+
+  <%= curated.info if curated.info %>
+
+  <% if curated.pros.any? %>
+  #### 🟢 Pros
+
+  <% curated.pros.each do |pros| %>
+    * <%= pros %>
+  <% end %>
+  <% end %>
+
+  <% if curated.cons.any? %>
+  #### 🟡 Cons
+
+  <% curated.cons.each do |cons| %>
+    * <%= cons %>
+  <% end %>
+  <% end %>
+
+  <% curated.comments.each do |comment| %>
+    <em>
+      <%= comment %>
+    </em>
+
+  <% end %>
+  <% end %>
+<% end %>
