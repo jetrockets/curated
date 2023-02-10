@@ -16,7 +16,7 @@ jobs:
         filters: |
           curates:
             - 'lib/ruby/**'
-          templates
+          templates:
             - 'lib/templates/**'
     - uses: ruby/setup-ruby@v1
       with:
