@@ -8,7 +8,7 @@ class Authlogic < Curated::RubyGem
   pros "We've been usi Authlogic for since 2010 and always had a great experience with it"
   pros 'It is easy to use and provides a simple, clean API for handling authentication.'
   pros 'It is flexible and customizable, allowing developers to modify the behavior of the authentication process to meet their specific needs.'
-  pros 'It is well documented and has an active community of developers contributing to its development, making it a reliable and well-supported solution for authentication.'
+  pros 'It is well documented and has an active community of developers.'
   pros 'Allows to maintain multiple sessions.'
 
   cons 'There is no built-in support for 2FA (two-factor authentication).'
