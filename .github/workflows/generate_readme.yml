@@ -2,11 +2,12 @@ name: Generate README
 
 on:
   pull_request:
-    branches: [main]
-    types: [closed]
+    types:
+      - opened
 
 jobs:
   render:
+    if: contains(github.event.pull_request.labels.*.name, 'ruby')
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
