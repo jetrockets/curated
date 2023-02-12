@@ -2,6 +2,7 @@
 
 require 'gems'
 
+require_relative 'utils'
 require_relative 'renderer'
 require_relative 'category'
 
@@ -86,6 +87,11 @@ class Curated
 
     def descendants
       ObjectSpace.each_object(Class).select { |klass| klass < self && klass != Curated::RubyGem }
+    end
+
+    def contributors
+      path = "lib/ruby/#{Utils.underscore(Utils.demodulize(self))}.rb"
+      Utils.contributors_for_file('jetrockets/curated', path)
     end
   end
 

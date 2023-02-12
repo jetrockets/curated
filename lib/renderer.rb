@@ -12,6 +12,12 @@ class Renderer
 
   protected
 
+  def h
+    @h ||= Class.new do
+      include Utils
+    end.new
+  end
+
   def ruby_curates
     Curated.descendants.group_by(&:category).sort_by { |category, _| category.name }
   end
