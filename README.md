@@ -21,3 +21,7 @@ An unobtrusive ruby authentication library based on ActiveRecord.
   * You need two implement all authentication logic yourself. Requires a lot of boilerplate code.
   * Tightly coupled to Rails. It is not possible to use it outside of Rails.
 
+
+#### Curators
+
+  * [igor-alexandrov](https://github.com/igor-alexandrov)
