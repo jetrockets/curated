@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Authlogic < Curated::RubyGem
+class Curated::Authlogic < Curated::RubyGem
   package 'authlogic'
   homepage 'https://github.com/binarylogic/authlogic'
   category Category::Authentication

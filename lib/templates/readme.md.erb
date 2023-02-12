@@ -34,5 +34,13 @@
     </em>
 
   <% end %>
+
+  <% if curated.contributors.any? %>
+  #### Curators
+
+  <% curated.contributors.each do |contributor| %>
+    * [<%= contributor %>](<%= h.github_link_to_login(contributor) %>)
+  <% end %>
+  <% end %>
   <% end %>
 <% end %>
