@@ -1,5 +1,7 @@
 # Curated list of libraries used by JetRockets
 
+Contribution is welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
 ## Authentication
 
 ### [¶ authlogic](#authlogic)
