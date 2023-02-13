@@ -8,8 +8,8 @@ class Curated::AwesomePackage < Curated::NpmPackage
 
   pros 'Optimization using PurgeCSS. No extra CSS in the build, just what you use'
   pros 'Removes the need for me to come up with “names of things”, just figure it out with classes and get beauty'
+  pros 'Small Learning Curve'
 
-  cons 'Small Learning Curve'
   cons 'HTML and Styling are mixed'
 
   comment 'You need to remember to put the reusing styles in a separate CSS file and use [@apply](https://tailwindcss.com/docs/reusing-styles).'
