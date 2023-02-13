@@ -15,6 +15,7 @@ jobs:
       with:
         filters: |
           curates:
+            - 'lib/curated/category.rb'
             - 'lib/ruby/**'
             - 'lib/js/**'
           templates:

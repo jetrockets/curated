@@ -13,7 +13,11 @@ module Curated::Category
 
   class ActiveRecordExtensions < Base; end
 
-  class Css < Base; end
+  class Css < Base
+    def self.name
+      'CSS'
+    end
+  end
 
   class Other < Base; end
 end
