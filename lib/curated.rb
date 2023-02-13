@@ -2,9 +2,7 @@
 
 require 'gems'
 
-require_relative 'utils'
-require_relative 'renderer'
-require_relative 'category'
+require_relative 'curated/utils'
 
 class Curated
   def self.inherited(subclass)
@@ -12,7 +10,7 @@ class Curated
       def self.inherited(subclass)
         super
 
-        unless subclass.superclass == Curated || subclass.superclass == Curated::RubyGem
+        unless subclass.superclass == Curated || subclass.superclass == Curated::RubyGem || subclass.superclass == Curated::NpmPackage
           raise StandardError, "You should avoid subclassing curated libraries. Please subclass from Curated or Curated::RubyGem instead."
         end
       end
@@ -86,12 +84,12 @@ class Curated
     end
 
     def descendants
-      ObjectSpace.each_object(Class).select { |klass| klass < self && klass != Curated::RubyGem }
+      ObjectSpace.each_object(Class).select { |klass| klass < self && klass != Curated::RubyGem && klass != Curated::NpmPackage }
     end
 
     def contributors
       path = "lib/ruby/#{Utils.underscore(Utils.demodulize(self))}.rb"
-      Utils.contributors_for_file('jetrockets/curated', path)
+      Utils.github_contributors_for_file('jetrockets/curated', path)
     end
   end
 
@@ -101,36 +99,11 @@ class Curated
   attr_rw :info
 end
 
-class Curated::RubyGem < Curated
-  class << self
-    def rubygems_info
-      @rubygems_info ||= Gems.info(package) if package
-    end
+require_relative 'curated/renderer'
+require_relative 'curated/category'
 
-    def name(val = nil)
-      rubygems_info.nil? ? super(val) : rubygems_info['name']
-    end
-
-    def info(val = nil)
-      rubygems_info.nil? ? super(val) : rubygems_info['info']
-    end
-  end
-end
-
-class Curated::Npmjs < Curated
-  class << self
-    def npmjs_info
-      @npmjs_info ||= Npm.info(package) if package
-    end
-
-    def name(val = nil)
-      npmjs_info.nil? ? super(val) : npmjs_info['name']
-    end
-
-    def info(val = nil)
-      npmjs_info.nil? ? super(val) : npmjs_info['description']
-    end
-  end
-end
+require_relative 'curated/ruby_gem'
+require_relative 'curated/npm_package'
 
 Dir[File.join(__dir__, 'ruby', '*.rb')].each { |file| require file }
+Dir[File.join(__dir__, 'js', '*.rb')].each { |file| require file }

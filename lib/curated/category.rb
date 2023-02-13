@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Category
+module Curated::Category
   class Base
     def self.name
       to_s.split('::').last

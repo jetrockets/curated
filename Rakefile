@@ -3,5 +3,5 @@
 require_relative 'lib/curated'
 
 task :render do
-  Renderer.new.call
+  Curated::Renderer.new.call
 end
