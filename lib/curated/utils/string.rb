@@ -30,10 +30,10 @@ module Utils
   def humanize(lower_case_and_underscored_word, capitalize: true, keep_id_suffix: false)
     result = lower_case_and_underscored_word.to_s.dup
 
-    result.tr!("_", " ")
+    result.tr!('_', ' ')
     result.lstrip!
     unless keep_id_suffix
-      result.delete_suffix!(" id")
+      result.delete_suffix!(' id')
     end
 
     result.gsub!(/([a-z\d]+)/i) do |match|
