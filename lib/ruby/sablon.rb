@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-class Sablon < Curated::RubyGem
-  extend MdFormating
-
+class Curated::Sablon < Curated::RubyGem
   package 'sablon'
   homepage 'https://github.com/senny/sablon'
   category Category::Other
@@ -14,7 +12,7 @@ class Sablon < Curated::RubyGem
     "\n\ntemplate.render_to_file File.expand_path('~/Users/bs/Documents/output.docx'), context"
 
   pros "We've been usi Sablon in some projects for inserting content in docx templates."
-  pros "It is easy to use this gem:\n #{ruby_example_code(text)}"
+  pros "It is easy to use this gem:\n #{Utils.ruby_example_code(text)}"
   pros "You can add to your documents simple values(which are the results of calculations in your methods),
     formatted html blocks containing everything you need (tables, unsorted lists, sorted lists,
     any text markup you need to add to the final docx file)"

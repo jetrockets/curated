@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'erb'
-require_relative 'md_formating'
 
 class Curated::Renderer
   def call
