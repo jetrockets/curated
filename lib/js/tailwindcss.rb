@@ -2,6 +2,7 @@
 
 class Curated::Tailwindcss < Curated::NpmPackage
   package 'tailwindcss'
+
   homepage 'https://www.npmjs.com/package/tailwindcss'
 
   category Category::Css
