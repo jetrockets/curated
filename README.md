@@ -9,6 +9,7 @@ Contribution is welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for deta
   [https://github.com/jhawthorn/discard](https://github.com/jhawthorn/discard)
 
 Allows marking ActiveRecord objects as discarded, and provides scopes for filtering.
+
 #### 🟢 Pros
 
   * Allows to soft-delete `ActiveRecord` records.
@@ -22,6 +23,7 @@ Allows marking ActiveRecord objects as discarded, and provides scopes for filter
 #### Curators
 
   * [igor-alexandrov](https://github.com/igor-alexandrov)
+
 ## Authentication
 
 ### [¶ authlogic](#authlogic)
@@ -29,6 +31,7 @@ Allows marking ActiveRecord objects as discarded, and provides scopes for filter
   [https://github.com/binarylogic/authlogic](https://github.com/binarylogic/authlogic)
 
 An unobtrusive ruby authentication library based on ActiveRecord.
+
 #### 🟢 Pros
 
   * We've been usi Authlogic for since 2010 and always had a great experience with it
@@ -47,6 +50,7 @@ An unobtrusive ruby authentication library based on ActiveRecord.
 #### Curators
 
   * [igor-alexandrov](https://github.com/igor-alexandrov)
+
 ## Authorization
 
 ### [¶ action_policy](#action_policy)
@@ -54,6 +58,7 @@ An unobtrusive ruby authentication library based on ActiveRecord.
   [https://github.com/palkan/action_policy](https://github.com/palkan/action_policy)
 
 Authorization framework for Ruby/Rails application
+
 #### 🟢 Pros
 
   * [Pre-checks](https://actionpolicy.evilmartians.io/#/pre_checks) allow to avoid a lot of boilerplate code.
@@ -67,13 +72,15 @@ Authorization framework for Ruby/Rails application
 #### Curators
 
   * [igor-alexandrov](https://github.com/igor-alexandrov)
-## Css
+
+## CSS
 
 ### [¶ tailwindcss](#tailwindcss)
 
   [https://www.npmjs.com/package/tailwindcss](https://www.npmjs.com/package/tailwindcss)
 
 A utility-first CSS framework for rapidly building custom user interfaces.
+
 #### 🟢 Pros
 
   * Optimization using PurgeCSS. No extra CSS in the build, just what you use
@@ -92,3 +99,4 @@ A utility-first CSS framework for rapidly building custom user interfaces.
 #### Curators
 
   * [solilin](https://github.com/solilin)
+
