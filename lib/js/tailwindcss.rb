@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Curated::AwesomePackage < Curated::NpmPackage
+class Curated::Tailwindcss < Curated::NpmPackage
   package 'tailwindcss'
   homepage 'https://www.npmjs.com/package/tailwindcss'
 
