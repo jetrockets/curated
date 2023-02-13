@@ -11,5 +11,7 @@ module Curated::Category
 
   class Authorization < Base; end
 
+  class ActiveRecordExtensions < Base; end
+
   class Other < Base; end
 end
