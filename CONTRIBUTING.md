@@ -22,7 +22,7 @@ DSL is a set of methods that describe a library. It is used to fetch information
 
 * `package` - the name of the package to look for at the source
 * `homepage` - link to the project homepage (usually GitHub repo)
-* `category` - category of the library (see `lib/categories.rb`)
+* `category` - category of the library (see `lib/curated/category.rb`)
 * `pros` - pros of the library. It can be called multiple times.
 * `cons` - cons of the library. It can be called multiple times.
 * `comment` - additional comment. It can be called multiple times.
