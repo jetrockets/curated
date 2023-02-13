@@ -8,6 +8,7 @@ module Curated::Category
   end
 
   class Authentication < Base; end
+
   class Authorozation < Base; end
 
   class Other < Base; end
