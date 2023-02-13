@@ -11,7 +11,11 @@ module Curated::Category
 
   class Authorization < Base; end
 
-  class ActiveRecordExtensions < Base; end
+  class ActiveRecordExtensions < Base
+    def self.name
+      'Active Record Extensions'
+    end
+  end
 
   class Css < Base
     def self.name

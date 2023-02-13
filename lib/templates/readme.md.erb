@@ -3,7 +3,7 @@
 Contribution is welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 <% ruby_curates.each do |category, curates| %>
-  ## <%= Utils.titleize(category.name) %>
+  ## <%= category.name %>
 
   <% curates.each do |curated| %>
   ### [¶ <%= curated.name %>](#<%= curated.name %>)
@@ -15,6 +15,7 @@ Contribution is welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for deta
   <%= curated.info if curated.info %>
 
   <% if curated.pros.any? %>
+
   #### 🟢 Pros
 
   <% curated.pros.each do |pros| %>
@@ -43,4 +44,5 @@ Contribution is welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for deta
   <% end %>
   <% end %>
   <% end %>
+
 <% end %>
