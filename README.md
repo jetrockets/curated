@@ -27,3 +27,25 @@ An unobtrusive ruby authentication library based on ActiveRecord.
 #### Curators
 
   * [igor-alexandrov](https://github.com/igor-alexandrov)
+## Authorozation
+
+### [¶ action_policy](#action_policy)
+
+  [https://github.com/palkan/action_policy](https://github.com/palkan/action_policy)
+
+Authorization framework for Ruby/Rails application
+#### 🟢 Pros
+
+  * [Pre-checks](https://actionpolicy.evilmartians.io/#/pre_checks) allow to avoid a lot of boilerplate code.
+  * [Caching](https://actionpolicy.evilmartians.io/#/caching) allows to avoid unnecessary database queries.
+  * Can be included into any class, not only controllers.
+
+
+  <em>
+    ActionPolicy is offen called "Pundit on steroids". If you already use Pundit, you can easily [migrate to ActionPolicy](https://actionpolicy.evilmartians.io/#/./pundit_migration).
+  </em>
+
+
+#### Curators
+
+  * [igor-alexandrov](https://github.com/igor-alexandrov)
