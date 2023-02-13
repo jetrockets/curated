@@ -41,9 +41,7 @@ Authorization framework for Ruby/Rails application
   * Can be included into any class, not only controllers.
 
 
-  <em>
-    ActionPolicy is offen called "Pundit on steroids". If you already use Pundit, you can easily [migrate to ActionPolicy](https://actionpolicy.evilmartians.io/#/./pundit_migration).
-  </em>
+  ActionPolicy is offen called "Pundit on steroids". If you already use Pundit, you can easily [migrate to ActionPolicy](https://actionpolicy.evilmartians.io/#/./pundit_migration).
 
 
 #### Curators
