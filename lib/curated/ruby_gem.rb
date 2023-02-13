@@ -13,5 +13,9 @@ class Curated::RubyGem < Curated
     def info(val = nil)
       rubygems_info.nil? ? super(val) : rubygems_info['info']
     end
+
+    def collection
+      :ruby
+    end
   end
 end

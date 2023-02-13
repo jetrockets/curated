@@ -87,8 +87,12 @@ class Curated
       ObjectSpace.each_object(Class).select { |klass| klass < self && klass != Curated::RubyGem && klass != Curated::NpmPackage }
     end
 
+    def collection
+      raise NotImplementedError
+    end
+
     def contributors
-      path = "lib/ruby/#{Utils.underscore(Utils.demodulize(self))}.rb"
+      path = "lib/#{collection}/#{Utils.underscore(Utils.demodulize(self))}.rb"
       Utils.github_contributors_for_file('jetrockets/curated', path)
     end
   end

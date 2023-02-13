@@ -13,5 +13,9 @@ class Curated::NpmPackage < Curated
     def info(val = nil)
       npmjs_info.nil? ? super(val) : npmjs_info['description']
     end
+
+    def collection
+      :js
+    end
   end
 end
