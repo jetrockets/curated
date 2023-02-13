@@ -2,7 +2,7 @@
 
 require 'erb'
 
-class Renderer
+class Curated::Renderer
   def call
     template = File.read('lib/templates/readme.md.erb').gsub(/^  /, '')
 
