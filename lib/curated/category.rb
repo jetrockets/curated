@@ -13,5 +13,7 @@ module Curated::Category
 
   class ActiveRecordExtensions < Base; end
 
+  class Css < Base; end
+
   class Other < Base; end
 end
