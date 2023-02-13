@@ -2,6 +2,26 @@
 
 Contribution is welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
+## Active Record Extensions
+
+### [¶ discard](#discard)
+
+  [https://github.com/jhawthorn/discard](https://github.com/jhawthorn/discard)
+
+Allows marking ActiveRecord objects as discarded, and provides scopes for filtering.
+#### 🟢 Pros
+
+  * Allows to soft-delete `ActiveRecord` records.
+  * Does not pollute `ActiveRecord::Base` automatically. You can include `Discard::Model` into any model you want.
+  * Does not override any existing `ActiveRecord` methods.
+
+
+  We've used [acts_as_paranoid](https://github.com/ActsAsParanoid/acts_as_paranoid) and [paranoia](https://github.com/rubysherpas/paranoia) in the past. The both are great libraries, however they both override some `ActiveRecord` methods. Besides this you can run into issues when working with associations. Discard seems to be a better alternative.
+
+
+#### Curators
+
+  * [igor-alexandrov](https://github.com/igor-alexandrov)
 ## Authentication
 
 ### [¶ authlogic](#authlogic)
