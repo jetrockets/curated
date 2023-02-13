@@ -27,7 +27,7 @@ An unobtrusive ruby authentication library based on ActiveRecord.
 #### Curators
 
   * [igor-alexandrov](https://github.com/igor-alexandrov)
-## Authorozation
+## Authorization
 
 ### [¶ action_policy](#action_policy)
 
