@@ -89,3 +89,6 @@ A utility-first CSS framework for rapidly building custom user interfaces.
   Tailwind CSS has many benefits in terms of maintainability, efficiency, and development speed. In addition to all of that, it has a fantastic ecosystem of UI elements and pre-existing designs. You can use comprehensive documentation and free tutorial videos on YouTube. Although it has a few limitations, Tailwind’s extensive library of CSS classes is useful for developers looking to improve their applications or websites.
 
 
+#### Curators
+
+  * [solilin](https://github.com/solilin)
