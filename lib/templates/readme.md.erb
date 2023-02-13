@@ -3,7 +3,7 @@
 Contribution is welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 <% ruby_curates.each do |category, curates| %>
-  ## <%= category.name %>
+  ## <%= Utils.titleize(category.name) %>
 
   <% curates.each do |curated| %>
   ### [¶ <%= curated.name %>](#<%= curated.name %>)
