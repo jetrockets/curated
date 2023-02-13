@@ -117,4 +117,20 @@ class Curated::RubyGem < Curated
   end
 end
 
+class Curated::Npmjs < Curated
+  class << self
+    def npmjs_info
+      @npmjs_info ||= Npm.info(package) if package
+    end
+
+    def name(val = nil)
+      npmjs_info.nil? ? super(val) : npmjs_info['name']
+    end
+
+    def info(val = nil)
+      npmjs_info.nil? ? super(val) : npmjs_info['description']
+    end
+  end
+end
+
 Dir[File.join(__dir__, 'ruby', '*.rb')].each { |file| require file }
