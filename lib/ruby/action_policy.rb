@@ -3,7 +3,7 @@
 class Curated::ActionPolicy < Curated::RubyGem
   package 'action_policy'
   homepage 'https://github.com/palkan/action_policy'
-  category Category::Authorozation
+  category Category::Authorization
 
   pros '[Pre-checks](https://actionpolicy.evilmartians.io/#/pre_checks) allow to avoid a lot of boilerplate code.'
   pros '[Caching](https://actionpolicy.evilmartians.io/#/caching) allows to avoid unnecessary database queries.'
