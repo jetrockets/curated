@@ -29,6 +29,8 @@ jobs:
       run: bundle install
     - name: Render README
       if: steps.filter.outputs.curates == 'true' || steps.filter.outputs.templates == 'true'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: bundle exec rake render
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
