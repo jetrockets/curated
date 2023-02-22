@@ -95,6 +95,14 @@ class Curated
       path = "lib/#{collection}/#{Utils.underscore(Utils.demodulize(self))}.rb"
       Utils.github_contributors_for_file('jetrockets/curated', path)
     end
+
+    private
+
+    def helper_utils
+      @helper_utils ||= Class.new do
+        include Utils
+      end.new
+    end
   end
 
   attr_rw :package
