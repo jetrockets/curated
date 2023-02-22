@@ -5,14 +5,19 @@ class Curated::Sablon < Curated::RubyGem
   homepage 'https://github.com/senny/sablon'
   category Category::Other
 
-  text =
-    '# First prepare docx file and add `MergeField` inside. For example the name of this MergeField is some_variable' \
-    "\n\nrequire 'sablon'\n\n template = Sablon.template(File.expand_path('/Users/bs/Documents/example_merge_field.docx'))" \
-    "\ncontext = { some_variable: 'This text will be added instead of `some_variable` in resulted docx file' }" \
-    "\n\ntemplate.render_to_file File.expand_path('~/Users/bs/Documents/output.docx'), context"
-
   pros "We've been usi Sablon in some projects for inserting content in docx templates."
-  pros "It is easy to use this gem:\n #{Utils.ruby_example_code(text)}"
+  # rubocop:disable Layout/ClosingParenthesisIndentation
+  pros "It is easy to use this gem:\n #{helper_utils.code_block "ruby", <<~RUBY
+    # First prepare docx file and add `MergeField` inside. For example the name of this MergeField is some_variable
+    require 'sablon'
+
+    template = Sablon.template(File.expand_path('/Users/bs/Documents/example_merge_field.docx'))
+    context = { some_variable: 'This text will be added instead of `some_variable` in resulted docx file' }
+      
+    template.render_to_file File.expand_path('~/Users/bs/Documents/output.docx'), context
+  RUBY
+    }"
+  # rubocop:enable Layout/ClosingParenthesisIndentation
   pros "You can add to your documents simple values(which are the results of calculations in your methods),
     formatted html blocks containing everything you need (tables, unsorted lists, sorted lists,
     any text markup you need to add to the final docx file)"

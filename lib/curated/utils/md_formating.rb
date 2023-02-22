@@ -2,7 +2,10 @@
 
 module Utils
   extend self
-  def ruby_example_code(text)
-    (+'```ruby') << "\n#{text}\n```"
+
+  def code_block(language, text = nil)
+    value = (+"```#{language}") << "\n#{text}```"
+
+    block_given? ? yield(value) : value
   end
 end
